@@ -3,7 +3,6 @@
 
 // but you don't so you're going to write it from scratch:
 var stringifyJSON = function(obj) {
-  console.log(obj);
   var str = "";
   var beg = "";
   var end = "";
