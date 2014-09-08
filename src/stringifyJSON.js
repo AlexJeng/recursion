@@ -48,20 +48,20 @@ var stringifyJSON = function(obj) {
 
   _.each(obj, function(item, index){
 
-  	   if(item === undefined || typeof item === 'function'){ //used for objects that can be stringified 
-  	   	 return false;
-  	   }
+  	if(item === undefined || typeof item === 'function'){ //used for objects that can be stringified 
+  	  	 return false;
+  	}
 
-  	  if(index > 0 && index <= length-1){ //works only for arrays
-  	  	str += (',');
-  	  }
-  	  else if(counter > 0 && counter < keys.length){ 
-  	  	str += (',');
-  	  }  	  
+    if(index > 0 && index <= length-1){ //works only for arrays
+    	str += (',');
+    }
+  	else if(counter > 0 && counter < keys.length){ 
+    	str += (',');
+	  }  	  
   	  
   	  counter ++;
   	  
-  	  if(!_.isArray(obj)){
+  	if(!_.isArray(obj)){
   	  	str += ('"' + index + '":');
   	  }
 	  if(typeof item === "number"){
